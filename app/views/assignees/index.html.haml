@@ -1,0 +1,26 @@
+%h1 All Assignees
+
+.container
+
+%table.table.striped
+  %thead
+    %tr
+      %th Name
+      %th Department
+      %th Show
+      %th Edit
+      %th Delete
+  %tbody     
+    - @assignees.each do |assignee|
+      %tr
+        %td= assignee.name
+        %td= assignee.department
+        %td= link_to 'Show', assignee
+        %td= link_to 'Edit', edit_assignee_path(assignee)
+        %td= link_to 'Delete', assignee, :method => :delete, :data => { :confirm => 'Are you sure?' }
+%br
+
+= button_to 'Add New Assignee', new_assignee_path, method: "get"
+%br
+%br
+= button_to 'See All Tasks', to_dos_path, method: "get"

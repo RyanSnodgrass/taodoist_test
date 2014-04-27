@@ -1,0 +1,42 @@
+%h1 All Tasks
+
+%table.table.striped
+  %thead
+    %tr
+      %th Task
+      %th Deadline
+      %th Department
+      %th Assignee
+      %th Completed
+      %th Show 
+      %th Edit
+      %th Delete   
+  %tbody      
+    - @to_dos.each do |to_do|
+      %tr
+        %td= to_do.task
+        %td= to_do.deadline
+        %td= to_do.department
+        %td= to_do.assignee.name
+        %td= to_do.completed
+        %td= link_to 'Show', to_do_path(to_do)
+        %td= link_to 'Edit', edit_to_do_path(to_do)
+        %td= link_to 'Delete', to_do_path(to_do), :method => :delete, :data => { :confirm => 'Are you sure?' }
+%br
+
+= button_to 'Add New Task', new_to_do_path, method: "get"
+%br
+%br
+= button_to 'See All Assignees', assignees_path, method: "get"
+%br
+%br
+%h2 Search Tasks
+= form_tag to_dos_path, method: "get" do
+  Completed?
+  %br
+  = select_tag "filter[completed]", options_for_select(["Yes", "No"]), include_blank: true
+  %br
+  %br
+  = text_field_tag "filter[task]"
+  = submit_tag "Filter"
+%br

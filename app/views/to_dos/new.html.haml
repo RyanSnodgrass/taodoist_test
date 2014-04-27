@@ -1,0 +1,7 @@
+%h1 New Task
+
+= form_for @new_to_do, url: "/to_dos" do |f|
+	= render 'form', f: f
+
+%br
+= button_to 'Back', to_dos_path, method: "get"

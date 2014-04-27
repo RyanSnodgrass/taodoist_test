@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task: MyString
+  deadline: 2014-04-24
+  department: MyString
+  assignee_id: 1
+  completed: false
+
+two:
+  task: MyString
+  deadline: 2014-04-24
+  department: MyString
+  assignee_id: 1
+  completed: false

@@ -1,0 +1,17 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @assignee.name
+%p
+  %b Department:
+  = @assignee.department
+%p
+  %b Picture:
+  = @assignee.avatar
+
+= link_to 'Edit', edit_assignee_path, method: "get"
+\|
+= link_to 'Back', assignees_path
+
+

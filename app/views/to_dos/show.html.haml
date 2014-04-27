@@ -1,0 +1,26 @@
+%p#notice= notice
+
+%p
+  %b Task:
+  = @to_do.task
+%p
+  %b Deadline:
+  = @to_do.deadline
+%p
+  %b Department:
+  = @to_do.department
+%p
+  %b Assignee:
+  = @to_do.assignee_id
+%p
+  %b Instructions:
+  = link_to "File", download_file_to_do_path
+  = image_tag @to_do.file.url
+%p
+  %b Completed:
+  = @to_do.completed
+
+= link_to 'Edit', edit_to_do_path, method: "get"
+\|
+= link_to 'Back', to_dos_path, method: "get"
+
