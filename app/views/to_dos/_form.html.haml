@@ -13,10 +13,10 @@
 = f.date_select :deadline
 %br
 = f.label :department
-= f.select :department, Assignee.all.collect{|a| [a.department] }
+= f.select :department, Assignee.all.collect{|a| [a.department]}
 %br
 = f.label :assignee_id
-= f.select :assignee_id, Assignee.all.collect{|a| [a.name] }
+= f.select :assignee_id, Assignee.all.collect{|a| [a.name, a.id] }
 %br
 = f.label "Instructions"
 = f.file_field :file
