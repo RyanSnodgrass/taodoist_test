@@ -1,5 +1,5 @@
 class ToDo < ActiveRecord::Base
-	has_many :assignees
+	belongs_to :assignee
 
 	scope :by_name, -> (name) { where('name = ?', name) }
 	scope :by_department, -> (department) { where('department = ?', department) }

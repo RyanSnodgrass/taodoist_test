@@ -1,6 +1,5 @@
 class Assignee < ActiveRecord::Base
-	belongs_to :to_do
-
+	has_many :to_dos
 	mount_uploader :avatar, AvatarUploader
 
 end
