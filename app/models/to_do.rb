@@ -5,6 +5,8 @@ class ToDo < ActiveRecord::Base
 	scope :by_department, -> (department) { where('department = ?', department) }
 	scope :by_deadline, -> (deadline) { where('deadline = ?', deadline) }
 
+	mount_uploader :file, FileUploader
+
 	def self.by_name(name)
 		joins(:assignees).where('assignees.name = ?', "%#{name}%")
 	end
@@ -34,7 +36,5 @@ class ToDo < ActiveRecord::Base
 
 		search
 	end
-
-	mount_uploader :file, FileUploader
 
 end
