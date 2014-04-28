@@ -17,7 +17,7 @@
         %td= to_do.task
         %td= to_do.deadline
         %td= to_do.department
-        %td= to_do.assignee.name unless to_do.assignee.nil?
+        %td= to_do.assignee.name
         %td= to_do.completed
         %td= link_to 'Show', to_do_path(to_do)
         %td= link_to 'Edit', edit_to_do_path(to_do)
