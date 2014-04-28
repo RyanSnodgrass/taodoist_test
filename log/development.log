@@ -26072,3 +26072,321 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 15:49:31
 
 
 Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-28 15:49:31 -0400
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-28 15:53:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ToDosController#index as HTML
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (/Users/masterblaster/IronYard/taodoist/app/models/to_do.rb:6: syntax error, unexpected ']', expecting '}'
+/Users/masterblaster/IronYard/taodoist/app/models/to_do.rb:40: syntax error, unexpected keyword_end, expecting '}'):
+  app/controllers/to_dos_controller.rb:6:in `index'
+
+
+  Rendered /Users/masterblaster/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/masterblaster/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/masterblaster/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/masterblaster/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.4ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-28 15:54:13 -0400
+Processing by ToDosController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+SyntaxError (/Users/masterblaster/IronYard/taodoist/app/models/to_do.rb:6: syntax error, unexpected ']', expecting '}'
+/Users/masterblaster/IronYard/taodoist/app/models/to_do.rb:40: syntax error, unexpected keyword_end, expecting '}'):
+  app/controllers/to_dos_controller.rb:6:in `index'
+
+
+  Rendered /Users/masterblaster/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/masterblaster/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/masterblaster/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/masterblaster/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.8ms)
+
+
+Started GET "/to_dos" for 127.0.0.1 at 2014-04-28 15:54:30 -0400
+Processing by ToDosController#index as HTML
+  [1m[35mToDo Load (0.7ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.2ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered to_dos/index.html.haml within layouts/application (30.4ms)
+Completed 200 OK in 62ms (Views: 53.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:31 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:31 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:31 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:31 -0400
+
+
+Started GET "/to_dos?utf8=%E2%9C%93&filter%5Bcompleted%5D=No&filter%5Btask%5D=&commit=Filter" for 127.0.0.1 at 2014-04-28 15:54:38 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"completed"=>"No", "task"=>""}, "commit"=>"Filter"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered to_dos/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:38 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:38 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:38 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:38 -0400
+
+
+Started GET "/to_dos?utf8=%E2%9C%93&filter%5Bcompleted%5D=Yes&filter%5Btask%5D=&commit=Filter" for 127.0.0.1 at 2014-04-28 15:54:42 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"completed"=>"Yes", "task"=>""}, "commit"=>"Filter"}
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered to_dos/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:42 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:42 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:42 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:42 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:42 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 15:54:42 -0400
+
+
+Started GET "/to_dos?utf8=%E2%9C%93&filter%5Bcompleted%5D=No&filter%5Btask%5D=&commit=Filter" for 127.0.0.1 at 2014-04-28 15:56:29 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"completed"=>"No", "task"=>""}, "commit"=>"Filter"}
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered to_dos/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:29 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:29 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:29 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:29 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:29 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:29 -0400
+
+
+Started GET "/to_dos?utf8=%E2%9C%93&filter%5Bcompleted%5D=&filter%5Btask%5D=Create+Mobile+App&commit=Filter" for 127.0.0.1 at 2014-04-28 15:56:35 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"completed"=>"", "task"=>"Create Mobile App"}, "commit"=>"Filter"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.3ms)[0m  SELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.2ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered to_dos/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:35 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:35 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 15:56:35 -0400
+
+
+Started GET "/to_dos?utf8=%E2%9C%93&filter%5Bcompleted%5D=&filter%5Btask%5D=Create+Mobile+App&commit=Filter" for 127.0.0.1 at 2014-04-28 16:16:00 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"completed"=>"", "task"=>"Create Mobile App"}, "commit"=>"Filter"}
+  [1m[35mToDo Load (0.3ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered to_dos/index.html.haml within layouts/application (15.2ms)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 16:16:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-28 16:16:00 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-28 16:16:00 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-28 16:16:00 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-28 16:16:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 16:16:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 16:16:00 -0400
+
+
+Started GET "/to_dos?utf8=%E2%9C%93&filter%5Bcompleted%5D=&filter%5Btask%5D=Create+Mobile+App&commit=Filter" for 127.0.0.1 at 2014-04-28 16:18:41 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"completed"=>"", "task"=>"Create Mobile App"}, "commit"=>"Filter"}
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered to_dos/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:42 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:42 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:42 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:42 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:42 -0400
+
+
+Started GET "/to_dos?utf8=%E2%9C%93&filter%5Bcompleted%5D=Yes&filter%5Btask%5D=&commit=Filter" for 127.0.0.1 at 2014-04-28 16:18:45 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"completed"=>"Yes", "task"=>""}, "commit"=>"Filter"}
+  [1m[35mToDo Load (0.1ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered to_dos/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:45 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:45 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:45 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:45 -0400
+
+
+Started GET "/to_dos?utf8=%E2%9C%93&filter%5Bcompleted%5D=No&filter%5Btask%5D=&commit=Filter" for 127.0.0.1 at 2014-04-28 16:18:49 -0400
+Processing by ToDosController#index as HTML
+  Parameters: {"utf8"=>"✓", "filter"=>{"completed"=>"No", "task"=>""}, "commit"=>"Filter"}
+  [1m[35mToDo Load (0.2ms)[0m  SELECT "to_dos".* FROM "to_dos"
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAssignee Load (0.1ms)[0m  SELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAssignee Load (0.1ms)[0m  [1mSELECT  "assignees".* FROM "assignees"  WHERE "assignees"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered to_dos/index.html.haml within layouts/application (11.7ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:49 -0400
+
+
+Started GET "/assets/assignees.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:49 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:49 -0400
+
+
+Started GET "/assets/to_dos.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-28 16:18:49 -0400
