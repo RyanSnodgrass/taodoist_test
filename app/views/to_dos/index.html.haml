@@ -14,7 +14,7 @@
   %tbody      
     - @to_dos.each do |to_do|
       %tr
-        %td= to_do.task
+        %td= to_do.department
         %td= to_do.deadline
         %td= to_do.department
         %td= to_do.assignee.name unless to_do.assignee.nil?
