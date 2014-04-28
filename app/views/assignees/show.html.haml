@@ -8,7 +8,7 @@
   = @assignee.department
 %p
   %b Picture:
-  = @assignee.avatar
+  = image_tag @assignee.avatar.url
 
 = link_to 'Edit', edit_assignee_path, method: "get"
 \|
