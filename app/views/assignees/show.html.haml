@@ -1,3 +1,5 @@
+%link{ :href => "//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css", :type => "text/css", :rel => "stylesheet" }
+
 %p#notice= notice
 
 %p
@@ -8,6 +10,7 @@
   = @assignee.department
 %p
   %b Picture:
+  %br
   = image_tag @assignee.avatar.url
 
 = link_to 'Edit', edit_assignee_path, method: "get"
