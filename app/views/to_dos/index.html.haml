@@ -33,12 +33,12 @@
 %br
 %br
 %h2 Search Tasks
-= form_tag to_dos_path, method: "get" do
+= form_tag filter_to_dos_path, method: "get" do
   Completed?
   %br
   = select_tag "filter[completed]", options_for_select(["Yes", "No"]), include_blank: true
   %br
-  / = date_select "filter[deadline]" 
+  /= date_select "filter[deadline]" 
   %br
   = text_field_tag "filter[task]"
   = submit_tag "Filter"

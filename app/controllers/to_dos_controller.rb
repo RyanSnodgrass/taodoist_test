@@ -55,6 +55,7 @@ class ToDosController < ApplicationController
 
   def filter
     @to_dos = ToDo.search(params[:filter])
+    render to_dos_path
   end
 
   def search
