@@ -36,6 +36,7 @@
   %br
   = select_tag "filter[completed]", options_for_select(["Yes", "No"]), include_blank: true
   %br
+  / = date_select "filter[deadline]" 
   %br
   = text_field_tag "filter[task]"
   = submit_tag "Filter"
